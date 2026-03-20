@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a;
+    int rem = 0;
+    int rev = 0;
+
+    cout<<"enter a num";
+    cout<<endl;
+    cin>>a;
+
+    int cpy = a;
+
+    while (a != 0)
+    {
+        rem = a% 10;
+        rev = rev * 10 + rem;
+        a/=10;
+    }
+
+    cout<<rev<<endl;
+
+
+    if (cpy == rev)
+        cout<<"palindrome";
+    else
+        cout<<"not";
+
+    cout<<endl;
+    system("pause");
+    return 0;
+}
