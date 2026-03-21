@@ -1,0 +1,95 @@
+#include <iostream>
+using namespace std;
+
+class sum
+{
+private:
+    int x;
+public:
+    void num (int n)
+    {
+        x=n;
+    }
+    int option;
+    void choose();
+    int sumR();
+};
+
+void sum :: choose ()
+{
+    cout<<"1 for for loop"<<endl;
+    cout<<"2 for do while"<<endl;
+    cout<<"3 for while"<<endl;
+    cin>>option;
+}
+
+int sum ::sumR()
+{
+    switch(option)
+    {
+    case 1:
+        {
+            int c;
+            cout<<"enter ";
+            cin>>c;
+
+            int sun=0;
+            int i;
+
+            for (i=1;i<=c;i++)
+            {
+                sun +=i;
+            }
+            cout<<sun;
+            break;
+        }
+
+    case 2:
+        {
+        int c;
+            cout<<"enter ";
+            cin>>c;
+
+            int sun=0;
+            int i=1;
+
+            do
+            {
+                sun +=i;
+                i++;
+            }
+            while(i<=c);
+            cout<<sun;
+            break;
+        }
+
+    case 3:
+        {
+            int c;
+            cout<<"enter ";
+            cin>>c;
+
+            int sun=0;
+            int i=1;
+
+            while(i<=c)
+            {
+               sun +=i;
+               i++;
+            }
+            cout<<sun;
+        }
+    }
+}
+
+int main()
+{
+    sum obj;
+    obj.choose();
+    obj.sumR();
+
+    cout<<endl;
+    system("pause");
+
+    return 0;
+}
