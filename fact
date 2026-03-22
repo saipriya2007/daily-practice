@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+class myfact
+{
+public:
+    int fact(int x);
+};
+
+int myfact::fact(int x)
+{
+    int a = 1;
+    int i;
+    for(i=1;i<=x;i++)
+    {
+        a *= i;
+    }
+    return a;
+}
+
+int main()
+{
+    int x;
+
+    cout<<"enter";
+    cin>>x;
+
+    myfact obj;
+    obj.fact(x);
+
+    cout<<obj.fact(x);
+
+
+
+    cout<<"\n";
+    system("pause");
+
+
+    return 0;
+}
+
