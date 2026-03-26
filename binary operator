@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+class comp
+{
+    int real;
+    int img;
+public:
+
+    comp(int r=0, int i=0)
+    {
+        real = r;
+        img = i;
+    }
+
+    comp operator+ (comp c)
+    {
+        return comp(real + c.real, img + c.img);
+    }
+
+    void show()
+    {
+        cout<<real << "  +  j  " <<img<<endl;
+    }
+};
+
+int main()
+{
+    comp c1(1,2), c2(3,4);
+    comp c3= c1+c2;
+    c3.show();
+
+
+
+    cout<<endl;
+    system("pause");
+
+
+    return 0;
+}
