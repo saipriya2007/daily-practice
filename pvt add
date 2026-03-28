@@ -1,0 +1,52 @@
+#include<iostream>
+
+using namespace std;
+
+class myAdd
+{
+private:
+    int x;
+public:
+    void add (int a)
+    {
+        x = a;
+    }
+
+    int b;
+
+    int caladd();
+};
+
+int myAdd :: caladd()
+{
+
+    int c;
+    c=x+b;
+
+    return c;
+}
+
+int main()
+{
+
+    int a;
+    cout<<"enter a  "<<endl;
+    cin>>a;
+
+    int b;
+    cout<<"enter b  "<<endl;
+    cin>>b;
+
+    myAdd obj;
+    obj.add(a);
+    obj.b = b;
+
+    cout<<obj.caladd();
+
+    cout<<endl;
+    system("pause");
+
+
+    return 0;
+
+}
