@@ -1,0 +1,88 @@
+ #include <iostream>
+ using namespace std;
+
+ class fact2;
+
+ class fact1
+ {
+ private:
+    int a;
+ public:
+    int fact11(int x)
+    {
+        a=x;
+    }
+    friend int calfact1 (fact1 p);
+ };
+
+ int calfact1 (fact1 p)
+ {
+     int i;
+     int ap =1;
+     for(i=1;i<=p.a;i++)
+     {
+         ap *= i;
+     }
+     return ap;
+ }
+
+ class fact2
+ {
+ private:
+    int b;
+ public:
+    int fact22(int y)
+    {
+        b=y;
+    }
+    friend int calfact2 (fact2 q);
+ };
+
+ int calfact2 (fact2 q)
+ {
+     int j;
+     int bq = 1;
+
+     for(j=1;j<=q.b;j++)
+     {
+         bq *= j;
+     }
+     return bq;
+ }
+
+
+ int main()
+ {
+     fact1 obj1;
+     int x;
+     cout<<"enter a";
+     cin>>x;
+     obj1.fact11(x);
+
+     int sai = calfact1(obj1);
+
+     fact2 obj2;
+     int y;
+     cout<<"enter b";
+     cin>>y;
+     obj2.fact22(y);
+
+     int priya = calfact2(obj2);
+
+
+     if(sai>priya)
+        cout<<sai;
+     else
+        cout<<priya;
+
+
+
+        cout<<endl;
+     system("pause");
+
+     return 0;
+
+
+
+
+ }
