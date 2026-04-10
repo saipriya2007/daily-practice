@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+
+class sum
+{
+private:
+    int x;
+public:
+    void sum1 (int n)
+    {
+        x=n;
+    }
+    int sumR (int x);
+};
+
+int sum :: sumR (int x)
+{
+    int sun=0;
+    int i;
+    for (i=1;i<=x;i++)
+    {
+        sun += i;
+    }
+    return sun;
+}
+
+int main ()
+{
+    int c;
+    int total;
+    cout<<"enter a natural number ";
+    cin>>c;
+
+    sum obj;
+    obj.sum1(c);
+
+    total=obj.sumR(c);
+    cout<<total;
+
+    cout<<endl;
+    system("pause");
+
+    return 0;
+}
